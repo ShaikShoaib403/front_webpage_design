@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <link rel="stylesheet"  href="cssnav.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+ </head>
+ <body bgcolor="red">
+  <div class="navbar">
+<a href="home.html">Home</a>
+
+<div class="dropdown">
+<button class="dropbtn">Frames</button>
+<div class="dropdown-content">
+         <a href="horizontal.html">Horizontal</a>
+         <a href="vertical.html">Vertical</a>
+         <a href="mixed.html">Mixed</a>
+		 <a href="customize.html">Customized</a>
+		<a href="iframe.html">Iframes</a> </div></div>
+
+<div class="dropdown">
+<button class="dropbtn">Table</button>
+<div class="dropdown-content">
+         <a href="simplet1.html">Simple Table</a>
+         <a href="#">Complex Table</a>
+         <a href="customizet3.html">Customize Table</a>
+		 
+		 </div></div>
+<div class="dropdown">
+<button class="dropbtn">List</button>
+<div class="dropdown-content">
+         <a href="order.html">Ordered List</a>
+         <a href="unorder.html">Unordered List</a>
+         <a href="description.html">Description List</a>
+		 </div></div>
+
+		 <div class="dropdown">
+<button class="dropbtn">CSS</button>
+<div class="dropdown-content">
+         <a href="css1.html">CSS-1</a>
+         <a href="css2.html">CSS-2</a>
+         <a href="#">CSS-3</a>
+		   <a href="review.html">Feedback</a>
+		 </div></div>
+		  <div class="dropdown">
+<button class="dropbtn">JavaScript</button>
+<div class="dropdown-content">
+         <a href="js1.html">JS-1</a>
+         <a href="js2.html">JS-2</a>
+         <a href="#">JS-3</a>
+		 </div></div>
+<div class="Login">
+<a href="InteractiveLogin.html">Login</a>
+
+</div>		
+</div>
+<h2>Hover Tabs</h2>
+<p>Move the mouse over a button inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, 'London')">London</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div class="clearfix"></div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+ </body>
+</html>

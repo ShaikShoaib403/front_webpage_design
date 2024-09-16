@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <link rel="stylesheet"  href="cssnav.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 50%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url("img1.jpg"); }
+.img2 { background-image: url("img2.jpg"); }
+.img3 { background-image: url("img3.jpg"); }
+.img4 { background-image: url("img4.jpg"); }
+.img5 { background-image: url("img5.jpg"); }
+.img6 { background-image: url("img6.jpg"); }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+ </head>
+ <body bgcolor="olive">
+  <div class="navbar">
+<a href="#">Home</a>
+
+<div class="dropdown">
+<button class="dropbtn">Frames</button>
+<div class="dropdown-content">
+         <a href="horizontal.html">Horizontal</a>
+         <a href="vertical.html">Vertical</a>
+         <a href="mixed.html">Mixed</a>
+		 <a href="customize.html">Customized</a>
+		<a href="iframe.html">Iframes</a> </div></div>
+
+<div class="dropdown">
+<button class="dropbtn">Table</button>
+<div class="dropdown-content">
+         <a href="simplet1.html">Simple Table</a>
+         <a href="#">Complex Table</a>
+         <a href="customizet3.html">Customize Table</a>
+		 
+		 </div></div>
+<div class="dropdown">
+<button class="dropbtn">List</button>
+<div class="dropdown-content">
+         <a href="order.html">Ordered List</a>
+         <a href="unorder.html">Unordered List</a>
+         <a href="description.html">Description List</a>
+		 </div></div>
+
+		 <div class="dropdown">
+<button class="dropbtn">CSS</button>
+<div class="dropdown-content">
+         <a href="css1.html">CSS-1</a>
+         <a href="css2.html">CSS-2</a>
+         <a href="#">CSS-3</a>
+		   <a href="review.html">Feedback</a>
+		 </div></div>
+		  <div class="dropdown">
+<button class="dropbtn">JavaScript</button>
+<div class="dropdown-content">
+         <a href="js1.html">JS-1</a>
+         <a href="js2.html">JS-2</a>
+         <a href="js3.html">JS-3</a>
+		 </div></div>
+<div class="Login">
+<a href="InteractiveLogin.html">Login</a>
+
+</div>		
+</div>
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
+
+<div class="bg-text">TEXT</div>
+ </body>
+</html>

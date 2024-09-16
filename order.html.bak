@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <link rel="stylesheet"  href="cssnav.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+ </head>
+ <body bgcolor="navy">
+  <div class="navbar">
+<a href="#">Home</a>
+
+<div class="dropdown">
+<button class="dropbtn">Frames</button>
+<div class="dropdown-content">
+         <a href="horizontal.html">Horizontal</a>
+         <a href="vertical.html">Vertical</a>
+         <a href="mixed.html">Mixed</a>
+		 <a href="customize.html">Customized</a><a href="iframe.html">Iframes</a>
+		 </div></div>
+
+<div class="dropdown">
+<button class="dropbtn">Table</button>
+<div class="dropdown-content">
+         <a href="simplet1.html">Simple Table</a>
+         <a href="#">Complex Table</a>
+         <a href="customizet3.html">Customize Table</a>
+		 
+		 </div></div>
+<div class="dropdown">
+<button class="dropbtn">List</button>
+<div class="dropdown-content">
+         <a href="#">Ordered List</a>
+         <a href="unorder.html">Unordered List</a>
+         <a href="description.html">Description List</a>
+		 </div></div>
+
+		 <div class="dropdown">
+<button class="dropbtn">CSS</button>
+<div class="dropdown-content">
+         <a href="css1.html">CSS-1</a>
+         <a href="css2.html">CSS-2</a>
+         <a href="css3.html">CSS-3</a>
+		   <a href="review.html">Feedback</a>
+		 </div></div>
+		  <div class="dropdown">
+<button class="dropbtn">JavaScript</button>
+<div class="dropdown-content">
+         <a href="js1.html">JS-1</a>
+         <a href="js2.html">JS-2</a>
+         <a href="js3.html">JS-3</a>
+		 </div></div>
+<div class="Login">
+<a href="InteractiveLogin.html">Login</a>
+
+</div>		
+</div>
+
+<h2>My Phonebook</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+ </body>
+</html>
